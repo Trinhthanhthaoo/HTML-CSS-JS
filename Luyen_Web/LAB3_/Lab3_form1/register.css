@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    background-color: antiquewhite;
+}
+.Block{
+    width: 500px;
+    margin: 50px auto;
+}
+h2{
+    text-align: center;
+}
+.Block .Element{
+   background-color: white;
+}
+
+.Block .Element{
+    padding: 20px;
+}
+.Block .Element .input .input_element input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 3px;
+    border: none;
+    border: solid 1.5px grey;
+    border-radius: 5px;
+}
+.Block .Element .input .sub_title input{
+    width: 100%;
+    padding: 3px;
+    border: none;
+    border: solid 1.5px grey;
+    border-radius: 5px;
+}
+.Block .Element .input select{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 3px;
+    border: none;
+    border: solid 1.5px grey;
+    border-radius: 5px;
+}
+.Block input{
+    margin-top: 20px;
+}
+.Block .DK_button button{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+   padding: 7px;
+   background-color: red;
+   border-radius: 5px;
+   border-color: red;
+   color: white;
+}

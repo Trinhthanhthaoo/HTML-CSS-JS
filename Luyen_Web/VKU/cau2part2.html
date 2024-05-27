@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Ensure proper character encoding -->
+    <title>Responsive Webpage Example</title> <!-- Page title -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Include custom CSS -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- Dark-themed navbar -->
+        <a class="navbar-brand" href="#">MyWebsite</a> <!-- Brand/logo -->
+
+        <!-- Toggle button for small screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar content that can collapse -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto"> <!-- Navigation links aligned to the left -->
+                <li class="nav-item active"> <!-- Active class indicates current page -->
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item"> <!-- Additional links -->
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item dropdown"> <!-- Dropdown menu -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Dropdown items -->
+                        <a class="dropdown-item" href="#">Contact</a>
+                        <a class="dropdown-item" href="#">FAQs</a>
+                        <div class="dropdown-divider"></div> <!-- Divider within the dropdown -->
+                        <a class="dropdown-item" href="#">Support</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto"> <!-- Right-aligned links -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content section -->
+    <div class="container mt-4"> <!-- Container with margin-top -->
+        <h1>Welcome to MyWebsite</h1>
+        <p>This is a sample webpage to demonstrate a responsive layout with Bootstrap. It includes a navigation bar with dropdown menus and a simple content section.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3"> <!-- Dark-themed footer -->
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p> <!-- Footer content -->
+    </footer>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

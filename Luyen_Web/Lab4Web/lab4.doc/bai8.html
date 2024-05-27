@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+      }
+
+      .video-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow-y: auto;
+        height: calc(100vh - 50px);
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .video-list li {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      .video-list li iframe {
+        width: 100%;
+      }
+
+      .main-video {
+        flex: 1;
+        margin-left: 10px;
+      }
+
+      .main-video iframe {
+        width: 100%;
+        height: calc(100vh - 50px);
+      }
+    </style>
+    <title>Danh sách Video</title>
+  </head>
+  <body>
+    <h1>Danh sách Video</h1>
+    <ul class="video-list">
+      <li>
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/5PvzGDU8WjM"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </li>
+      <li>
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/cqInIXhIzOQ"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </li>
+      <li>
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/oxfMl7Vuk4g"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </li>
+      <li>
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/VkUx9npkx54"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </li>
+    </ul>
+    <div class="main-video">
+      <iframe
+        width="100%"
+        height="calc(100vh - 50px)"
+        src="https://www.youtube.com/embed/-T0rxPwVNIk"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>

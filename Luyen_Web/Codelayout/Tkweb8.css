@@ -1,0 +1,39 @@
+body{
+    margin: 0px auto;
+    width: 1000px;
+}
+
+ul.menu{
+    width: 1000px;
+    
+}
+
+ul.menu li{
+    list-style: none;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    background-color: pink;
+    border: 1px solid green;
+    width: 200px;
+}    
+ul.menu li >ul{
+    display: none;
+    padding: 0px 0px;
+}
+ul.menu li:hover >ul{
+    display: block;
+}
+ul.menu li a{
+    text-decoration: none;
+    color: black;
+}
+ul.menu li ul li ul li{
+    left: 200px;
+    top: -30px;
+} css

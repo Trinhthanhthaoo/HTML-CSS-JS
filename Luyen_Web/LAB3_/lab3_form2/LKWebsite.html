@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComboBox Website Links</title>
+</head>
+<body>
+    <h3><b>Liên kết Website</b></h3>
+    <form id="websiteForm">
+        <select id="websiteSelect">
+            <option value="">Chọn website</option>
+            <option value="http://www.laodong.com.vn">Báo lao động</option>
+            <option value="http://www.vnexpress.net">Tin nhanh Việt Nam</option>
+            <option value="http://www.tuoitre.com.vn">Báo tuổi trẻ</option>
+        </select>
+        <button type="button" onclick="goToSelectedWebsite()">Go</button>
+    </form>
+
+    <script>
+        function goToSelectedWebsite() {
+            var selectBox = document.getElementById("websiteSelect");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            if (selectedValue) {
+                window.location = selectedValue;
+            }
+        }
+    </script>
+</body>
+</html>

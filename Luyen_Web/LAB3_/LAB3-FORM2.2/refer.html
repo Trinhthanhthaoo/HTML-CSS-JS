@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class="head">
+        <h1 align="left" style="color: rgb(15, 107, 237); font-size: medium;">Tham khảo<small> (không bắt buộc)</small></h1>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    </div>
+    <body>
+        <form>
+            <div class="person">
+                <label for="person" >Người tham khảo <stan style="color:red ;">*</stan></label>
+                &emsp;<input type="text" id="person" name="person" style="width: 400px; height: 25px;">
+            </div>
+            <div class="chucvu">
+                <label for="chucvu">Chức danh<stan style="color:red ;">*</stan></label>
+                &emsp;&emsp;&emsp;&emsp;<input type="text" id="chucvu" name="chucvu" style="width: 400px; height: 25px;">
+            </div>
+            <div class="company">
+                <label for="company">Tên công ty<stan style="color:red ;">*</stan></label>
+                &emsp;&emsp;&emsp;&nbsp;&nbsp;<input type="text" id="company" name="company" style="width: 400px; height: 25px;">
+            </div>
+            <div class="email">
+                <label for="email">Email <stan style="color:red ;">*</stan></label>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;<input type="email" id="email" name="email" style="width: 400px; height: 25px;">
+            </div>
+            <div class="sdt">
+                <label for="sdt">Số điện thoại <stan style="color:red ;">*</stan></label>
+                &emsp;&emsp;&nbsp;&nbsp;<input type="number" id="sdt" name="sdt" style="width: 400px;height: 25px;">
+            </div>
+            <div class="button">
+                <label for="button"></label>
+                &emsp;&emsp;&emsp;&emsp;&emsp;<input type="button" id="button" name="button" value="Lưu" style="background-color: red; color: white; width: 70px; height: 30px;">
+                <input type="button" id="button" name="button" value="X Không lưu" style="background-color: rgb(178, 175, 175);color: white;height: 30px; width: 100px;">
+            </div>
+            <div class="choice">
+                <label for="option"></label>
+                <input type="radio" id="option" name="option"> Cho phép Nhà tuyển dụng tìm kiếm thông tin của bạn và chủ động liên hệ mời phỏng vấn 
+                <br>
+                <input type="radio" id="option" name="option"> Không cho phép Nhà tuyển dụng tìm kiếm. Hồ sơ này chỉ dùng để ứng tuyển 
+            </div>
+            <div class="see">
+                <a href="#">
+                     <label for="see"></label>
+                    <!-- <span class="button-icon">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </span> -->
+                </a>
+                &emsp;&emsp;<input type="button" id="see" name="see" value="Xem trước" style="background-color: white; color: red; width:170px ; height: 35px;">
+                <input type="button" id="see" name="see" value="Lưu hồ sơ" style="background-color: red; color: white; width:170px ; height: 35px;" >
+            </div>
+        </form>
+        <style>
+            form{
+                padding: 2px;
+                line-height:5;
+                text-align: center;
+                width: 650px;
+            }
+            .button{
+                text-align: center;
+            }
+            .choice{
+                text-align: left;
+                line-height:1.5;
+            }
+            .see{
+                text-align: center;
+                display:inline-block;
+                text-decoration: none; 
+                
+            }
+            .head{
+                border-left: 3px solid red;
+            }
+        </style>
+    </body>
+    <style>
+        body{
+            border: 2px solid grey;
+            width: 700px;
+        }
+        </style>
+</html>
+
+

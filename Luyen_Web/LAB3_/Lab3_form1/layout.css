@@ -1,0 +1,12 @@
+.common{
+    width: 500px;
+    margin: 50px auto;
+}
+.common .Page{
+    background-color: grey;
+    width: 100%;
+    
+}
+.common .content {
+    margin-bottom: 10px;
+}

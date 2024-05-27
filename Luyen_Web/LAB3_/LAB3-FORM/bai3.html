@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .gui{
+            text-align: center;
+        }
+        .ttuv{
+            text-align: center;
+        }
+    </style>
+    <body>
+        <form>
+            <table>
+                <tr class="ttuv">
+                    <td colspan="2">
+                    <label for="thongtin"><b>THÔNG TIN ỨNG VIÊN</b></label><br>
+                     </td>    
+                </tr>   
+                <tr>
+                    <td><label for="hoten"><b>Họ tên</b></label></td>
+                    <td><input type="text" id="hoten" name="hoten"></td>
+                </tr> 
+                <tr> 
+                    <td>
+                    <label for="namsinh"><b>Năm sinh</b></label>
+                    </td>
+
+                    <td><select id="namsinh" name="namsinh">
+                        <option value="1990">1990</option>
+                        <option value="1991">1991</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                       </select>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <label for="gioitinh"><b>Giới tính</b></label>             
+                    </td>
+                    <td>
+                       
+                        <input type="radio" id="nam" name="gioitinh" value="nam">
+                        <label for="nam">Nam</label>
+                        <input type="radio" id="nữ" name="gioitinh" value="Nữ">
+                        <label for="nữ">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="luong"><b>Mức lương đề nghị</b></label>
+                    </td>
+                    <td>    
+                        <input type="text" id="luong" name="luong">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="hinhthuc"><b>Hình thức làm việc</b></label>
+                    </td>    
+                    <td>
+                        <input type="checkbox" id="toanthoigian" name="hinhthuc" value="Toàn thời gian">
+                        <label for="toanthoigian">Toàn thời gian</label>
+                        <input type="checkbox" id="tbanthoigian" name="hinhthuc" value="Bán thời gian">
+                        <label for="banthoigian">Bán thời gian</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="khac"><b>Thông tin khác</b></label>
+                    </td>
+                    <td >
+                        <textarea id="khac" name="khac" rows="4"></textarea>
+                    </td>
+                </tr>
+                <tr class="gui">
+                    <td colspan="2"><input type="submit" value="Gửi">
+                        <input type="reset" value="Xóa">
+                    </td>
+                </tr>
+        </table></form>
+    </body>
+</html>

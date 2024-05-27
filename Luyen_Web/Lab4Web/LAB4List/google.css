@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 300px 300px 100px;
+    grid-template-areas: 
+    "head head head"
+    ". contentt ."
+    ". nav ."
+    "footer footer footer";
+}
+.Header, .content, .footer{
+    width: 100%;
+    display: flex;
+}
+.Header {
+    background-color: white;
+    grid-area: head;
+    padding: 12px;
+    display: flex;
+    align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+}
+
+.Header a {
+    margin-right: 20px; /* Khoảng cách giữa các liên kết */
+}
+
+.Header a:first-child {
+    margin-right: auto; /* Căn thẻ "Google" về bên trái */
+}
+.Header .left a{
+    grid-column-start: 3;
+}
+.content{
+    background-color: white;
+    grid-area: contentt;
+}
+.content2{
+    background-color: white;
+    grid-area: nav;
+   
+}
+.footer{
+    background-color: white;
+    grid-area: footer;
+    grid-column-start: 2;
+}

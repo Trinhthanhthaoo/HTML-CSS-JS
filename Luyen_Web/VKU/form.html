@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        button {
+            background-color: darkgoldenrod;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: white;
+            text-align: left;
+            background-color: darkgoldenrod;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: 48%;
+        }
+        .form-group input[type="text"]:nth-child(2),
+        .form-group input[type="email"]:nth-child(2),
+        .form-group input[type="password"]:nth-child(2) {
+            margin-left: 4%;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .input-icon {
+            position: relative;
+        }
+        .input-icon input {
+            padding-right: 30px;
+        }
+        .input-icon i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #ccc;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 0;
+        }
+        .button {
+            text-align: right; /* Căn phải */
+        }
+    </style>
+</head>
+<body>
+    <form class="dk">
+        <div>
+            <h1>ĐĂNG KÝ</h1>
+        </div>
+        <div class="form-group">
+            <input type="text" id="ho" placeholder="Họ" style="width: 5cm;">
+            <input type="text" id="ten" placeholder="Tên" style="width: 5cm;">
+        </div>
+        <div class="form-group">
+            <div class="input-icon">
+                <input type="text" id="tk" placeholder="Tài Khoản" style="width: 4cm;">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-icon">
+                <input type="email" id="email" placeholder="Địa chỉ Email" style="width: 4cm;">
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-icon">
+                <input type="password" id="mk" placeholder="Mật khẩu" style="width: 4cm;">
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="input-icon">
+                <input type="password" id="mk_confirm" placeholder="Xác nhận mật khẩu" style="width: 4cm;">
+                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+        <div>
+            <select>
+                <option value="">Chọn Giới Tính</option>
+                <option value="">Nam</option>
+                <option value="">Nữ</option>
+            </select>
+        </div>
+        <hr>
+        <div class="button"> <!-- Đây là phần tử chứa nút -->
+            <button>Đăng ký ngay</button>
+        </div>
+    </form>
+</body>
+</html>

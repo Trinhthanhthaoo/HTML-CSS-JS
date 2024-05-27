@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table>
+            <tr>
+                <td style="color: blue; font-size: medium;">
+                    <div class="head">
+                    Thông tin tài khoản<small>(bắt buộc)</small>
+                    </div>
+                    <td><hr width="500cm"></td>
+                    <td>
+                        <label for="rut"></label>
+                        <select id="rut" name="rut">
+                            <option value="Rút gọn">Rút gọn</option>
+                        </select>
+                    </td>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                    <div class="img">
+                        <div id="imageContainer">
+                            <img id="uploadedImage" src="#" alt="Chưa cập nhật hình ảnh" align="left" >
+                            <div id="imageLabel" align="center">Chưa cập nhật hình ảnh</div>
+                        </div>
+                        <input type="file" id="fileInput" style="display: none;" onchange="previewImage()">
+                        <button id="uploadButton" onclick="document.getElementById('fileInput').click()">Tải Ảnh Lên</button>
+                        </div>
+                </td>
+                <td>
+                    <div class="total">
+                        <div class="name">
+                            <label for="name">Họ tên <span style="color:red; ">*</span></label>
+                            <input type="text" id="name" name="name" style="width: 300px; height: 24px;" required> 
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="sdt">
+                        <label for="sđt">Số điện thoại <span style="color:red">*</span></label>
+                        <input type="number" id="sđt" name="sđt" style="width: 300px; height: 24px;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dob">
+                        <label for="dob">Ngày sinh <span style="color:red">*</span></label>
+                        <input type="date" id="dob" name="dob" style="width: 300px; height: 24px;">
+                    </div>
+                </td>
+            </tr>
+            <tr >
+                <td >
+                    <div class="sex">
+                        <label for="sex">Giới tính <span style="color:red">*</span></label>
+                        <select id="sex" name="sex" style="width: 300px; height: 24px;">
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    <td>
+                        <div class="status">
+                            <label for="status">Hôn nhân <span style="color:red">*</span></label>
+                            <select id="status" name="status" style="width: 300px; height: 24px;">
+                                <option>Chọn tình trạng hôn nhân</option>
+                                <option value="Đã kết hôn">Đã kết hôn</option>
+                                <option value="Chưa ">Độc thân</option>
+                            </select>
+                        </div>
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="city">
+                                <label for="city">Tỉnh/Thành phố <span style="color:red">*</span></label>
+                                <select id="city" name="city" style="width: 300px; height: 24px;">
+                                    <option value="Đà Nẵng">Đà Nẵng</option>
+                                    <option value="Bà Rịa">Bà Rịa</option>
+                                    <option value="Sài Gòn">Sài Gòn</option>
+                                </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="live">
+                            <label for="live">Chỗ ở hiện tại <span style="color:red">*</span></label>
+                            <input type="text" id="live" name="live" style="width: 300px; height: 24px;">
+                        </div>
+                    </td>
+                </tr>
+                <br>
+        </table>
+        <br>
+            <button class="button" >
+                <i class="fas fa-check"></i> 
+                Lưu
+            </button>
+            
+            <script>
+                function previewImage() {
+                    var fileInput = document.getElementById('fileInput');
+                    var uploadedImage = document.getElementById('uploadedImage');
+                    var imageLabel = document.getElementById('imageLabel');
+        
+                    if (fileInput.files && fileInput.files[0]) {
+                        var reader = new FileReader();
+        
+                        reader.onload = function(e) {
+                            uploadedImage.style.display = 'block';
+                            uploadedImage.src = e.target.result;
+                            imageLabel.style.display = 'none';
+                        }
+        
+                        reader.readAsDataURL(fileInput.files[0]);
+                    }
+                }
+            </script>
+        
+            <style>
+                body{
+                    width: 770px;
+                    height: 600px;
+                    border: 2px solid grey;
+                    text-align: center;
+    
+                }
+                table{
+                    line-height: 3;
+                    text-align: right;
+                }
+                .head{
+                    border-left: 3px solid red;
+                }
+            </style> 
+            <style>
+            .button{
+                text-align: center;
+                padding: 10px 20px;
+                cursor: pointer;
+                background-color: red;
+                color: white;
+            }
+            .button i{
+                text-align: center;
+                margin-right: 10px;
+                
+            }
+        </style>
+        <style>
+            #imageContainer {
+                width: 150px;
+                height: 150px;
+                border: 1px solid #ccc;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: left;
+                overflow: hidden;
+                position: relative;
+            }
+            #uploadedImage {
+                max-width: 100%;
+                max-height: 100%;
+                display: none;
+            }
+            #imageLabel {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            #uploadButton {
+                margin-top: 10px;
+                display: block;
+                text-align: left;
+            }
+        </style>
+        
+    </body>
+</html>

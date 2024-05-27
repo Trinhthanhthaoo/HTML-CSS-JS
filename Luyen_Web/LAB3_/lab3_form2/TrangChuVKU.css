@@ -1,0 +1,71 @@
+@charset "utf8";
+body{
+    margin: 0px;
+    font-family: arial;
+    font-size: 13px;
+
+
+    margin: 0 auto;
+}
+#baner{
+    width: 1000px;
+    height: 100px;
+    border: 1px solid green;
+    background-color: blue;
+}
+#menu{
+    width: 1000px;
+    height: 40px;
+    border: 1px solid green;
+    background-color: yellow;
+}
+#main #left{
+    width: 200px;
+    min-height: 400px;
+    border: 1 px solid;
+    background: #b29f9f;
+    float: left;
+}
+#main #right{
+    width: 800px;
+    min-height: 400px;
+    border: 1px solid;
+    background: pink;
+    margin-left: 200px;
+}
+#footer{
+    width: 1000px;
+    height: 100px;
+    border: 1px solid green;
+    background: green;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+}
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    box-sizing: border-box; /* Tính cả border và padding vào kích thước */
+    float: left;
+    text-transform: uppercase;
+    padding: 10px 20px; /* Điều chỉnh padding nếu cần */
+    border: 1px solid blue;
+}
+
+#menu {
+    border: 1px solid blue; /* Border của thẻ div */
+}
+
+
+h3{
+    text-align: center;
+    color: red;
+}
+#main #left ul li{
+    list-style: none;
+    line-height: 30px;
+}

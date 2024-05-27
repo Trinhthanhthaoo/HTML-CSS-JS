@@ -1,0 +1,219 @@
+body {
+    width: 1200px; /* Tăng chiều rộng */
+    margin: 0 auto; /* Để căn giữa */
+}
+
+#baner {
+    width: 3000px;
+}
+
+#menu {
+    width: 1200px;
+}
+
+#main {
+    width: 1200px;
+}
+
+#footer {
+    width: 1200px;
+}
+#baner {
+    height: 150px; /* Tăng chiều cao banner */
+}
+
+#menu {
+    height: 70px; /* Tăng chiều cao menu */
+}
+
+#main {
+    min-height: 500px; /* Tăng chiều cao tối thiểu */
+}
+
+#footer {
+    height: 150px; /* Tăng chiều cao footer */
+}
+
+
+#baner {
+    width: 1000px;
+    height: 100px;
+    border: 1px solid green;
+    background: #fff;
+    text-align: center;
+}
+#baner {
+    height: 150px; /* Chiều cao banner */
+}
+
+#baner img {
+    height: 100%; /* Đảm bảo ảnh co theo chiều cao */
+    object-fit: contain; /* Đảm bảo ảnh giữ nguyên tỷ lệ */
+}
+
+/* Đảm bảo menu có đủ chiều rộng */
+#menu {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa các mục */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: yellow; /* Màu nền */
+    height: 60px; /* Tăng chiều cao để phù hợp với padding */
+    border: 1px solid black; /* Đường viền */
+}
+
+/* Mục trong menu */
+#menu ul {
+    display: flex; /* Sử dụng Flexbox để duy trì cùng hàng */
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Bỏ padding của danh sách */
+    margin: 0; /* Bỏ margin của danh sách */
+}
+
+/* Các mục menu */
+#menu ul li {
+    padding: 15px 50px; /* Tăng padding */
+    border: 1px solid black; /* Đường viền */
+    background-color: #fff; /* Màu nền */
+    text-transform: uppercase; /* Chuyển chữ hoa */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu */
+}
+
+/* Khi di chuột qua */
+#menu ul li:hover {
+    background-color: red; /* Màu nền khi di chuột */
+}
+
+/* Liên kết trong menu */
+#menu ul li a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: black; /* Màu chữ */
+}
+
+#menu ul li a:hover {
+    color: white; /* Màu chữ khi di chuột qua */
+}
+
+#main {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử */
+    justify-content: space-between; /* Đảm bảo khoảng cách giữa các phần */
+    min-height: 500px; /* Tăng chiều cao tối thiểu */
+    width: 1200px; /* Tăng chiều rộng của phần main */
+}
+
+#main #left {
+    width: 20%; /* Giữ cố định phần trái */
+}
+
+#main #right {
+    width: 80%; /* Tăng chiều rộng phần phải */
+    border: 1px solid green;
+}
+
+#main {
+    width: 1000px;
+    min-height: 400px;
+}
+
+#main #left {
+    width: 200px;
+    min-height: 400px;
+    border: 1px solid green;
+    background: #b29f9f;
+    float: left;
+    
+}
+
+#main #left a {
+    text-decoration: none;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#main #right {
+   
+    min-height: 400px;
+    border: 1px solid green;
+}
+
+#footer {
+    width: 1000px;
+    height: 100px;
+    border: 1px solid green;
+    background: green;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: red;
+}
+
+#main #left ul li {
+    list-style-type: none;
+    line-height: 30px;
+}
+
+.wrapper {
+    width: 200px;
+    margin: 50px auto;
+}
+
+.wrapper .login {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.wrapper .login .title {
+    font-size: 32px;
+    text-align: center;
+
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+    font-weight: 100px;
+}
+
+.wrapper .login .group-input {
+    margin-bottom: 10px;
+}
+
+.wrapper .login .group-input .sub-title {
+    color: grey;
+}
+
+.wrapper .login .group-input input {
+    width: 100%;
+    padding: 3px;
+    border: none;
+    border: solid 1.5px grey;
+    border-radius: 5px;
+}
+
+.wrapper .login button {
+    width: 100%;
+    padding: 5px;
+    background-color: #4AC1A3;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wrapper .sign-up-here {
+    text-align: center;
+    color: #fff;
+    margin: 10px;
+}
+
+.wrapper .sign-up-here a {
+    color: #4AC1A3;
+    /* text-decoration: underline; */
+    cursor: pointer;
+}

@@ -1,0 +1,68 @@
+body{
+     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    background-image: url("lucky.jpg");
+    border-radius: 150px;
+    background: #5a66bf;
+    box-shadow:  21px 21px 42px #4d57a2,
+                 -21px -21px 42px #6875dc;
+}
+h1{
+    width: 1500px;
+    height: 62px;
+    color:black;
+    text-align: center;
+}
+h3{
+    color:black;
+    text-align: center;
+}
+.Last_Name {
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+.First_Name{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self:  flex-start;
+}
+.firstName_Label{
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+.Email{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+.Password{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+.Confirm_Password {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+button{
+    background-color:  #d5c839;
+    width: 175px;
+    height: 25px;
+    cursor: pointer;
+    color :#fff
+}

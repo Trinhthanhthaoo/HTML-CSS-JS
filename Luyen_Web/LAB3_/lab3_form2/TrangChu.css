@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 150px 50px 1fr 50px;
+    grid-template-areas: 
+    "heard heard heard "
+    "nav nav nav "
+    "content sidebar sidebar"
+    "footer footer footer"
+
+    
+}
+.heard ,
+.nav,
+.content,
+.sidebar,
+.footer{
+    width: 100%;
+    display: flex;
+}
+.heard{
+    grid-area: heard;
+    
+}
+.heard img{
+width: 100%;
+height: 100%;
+}
+.nav{
+    background-color: red;
+    grid-area: nav;
+}
+.content{
+    background-color: orange;
+    grid-area: content;
+}
+.sidebar{
+    background-color: greenyellow;
+    grid-area: sidebar;
+}
+.footer{
+    background-color: purple;
+    grid-area: footer;
+}

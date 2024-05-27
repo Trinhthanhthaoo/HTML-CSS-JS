@@ -1,0 +1,18 @@
+Result:
+	1. Insertion Sort
+		- Time Complexity: O(n^2)
+		- Execution time: ~1.027s
+	2. Selection Sort
+		- Time Complexity: O(n^2)
+		- Execution time: ~0.946s
+	3. Bubble Sort
+		- Time Complexity: O(n^2)
+		- Execution time: ~1.118s
+	4. Quick Sort
+		- Time Complexity: 	
+			* Best case: O(nlogn) or O(n)
+			* Worst case: O(n^2)
+		- Execution time: ~0.879s
+	5. Merge Sort
+		- Time Complexity: O(nlogn)
+		- Execution time: ~0.867s

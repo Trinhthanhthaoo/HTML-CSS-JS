@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    padding: 2.5rem;
+    border : 1px solid #dadce0;
+    border-radius: 8px;
+}
+.box h2{
+    margin: 0 0 -0.125rem;
+    padding: 0;
+    color: #E8F2FE;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.box p{
+font-size: 16px;
+font-weight: normal;
+letter-spacing: .1px;
+line-height: 1.5px;
+margin-bottom: 25px;
+text-align: center;
+}
+.box .inputBox {
+    position: relative;
+}
+.box .inputBox input {
+ width: 93%;
+ padding: 0.625rem 10px;
+ font-size: 1rem ;
+ letter-spacing: 0.062rem;
+ margin-bottom: 1.875 rem;
+ border: 1px  solid #dadce0;
+ background: transparent;
+ border-radius: 4px;
+}
+.box .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: #ccc;
+    pointer-events: none;
+transition: 0.3s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value =""]) ~ label{
+    top: -1.125rem;
+    left: 10px;
+    color: #1a73e8;
+    font-size: .75rem;
+    background-color: #fff;
+    height: 10px;
+    padding: 0 5px;
+}
+.box .inputBox input:focus  {
+    outline: none;
+    border: 2px;
+}

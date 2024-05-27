@@ -1,0 +1,18 @@
+/* Custom styles for the project */
+
+/* Navbar customization */
+.navbar {
+    /* Additional customization for the navbar can go here */
+}
+
+/* Main content section customization */
+.container {
+    /* Additional customization for the container can go here */
+}
+
+/* Footer customization */
+footer {
+    /* Dark background and white text for the footer */
+    background-color: #333;
+    color: white;
+}
