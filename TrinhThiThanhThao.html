@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Canvas</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="400"
+      height="400"
+      style="background-color: #cee3ff"
+    ></canvas>
+
+    <canvas
+      id="canvas1"
+      width="400"
+      height="400"
+      style="background-color: #e8ff47"
+    ></canvas>
+
+    <canvas
+      id="canvas2"
+      width="400"
+      height="400"
+      style="background-color: #effbb5"
+    ></canvas>
+
+    <canvas
+      id="canvas3"
+      width="400"
+      height="400"
+      style="background-color: #03b6fb"
+    ></canvas>
+
+    <canvas
+      id="canvas4"
+      width="400"
+      height="400"
+      style="background-color: #70ddf0"
+    ></canvas>
+
+    <canvas
+      id="canvas5"
+      width="400"
+      height="400"
+      style="background-color: #70ddf0"
+    ></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      // Vẽ thân mèo
+      ctx.fillStyle = "#FE027E";
+      ctx.fillRect(100, 150, 200, 100); // x, y, chiều rộng, chiều cao
+
+      // Vẽ đầu mèo
+      ctx.fillStyle = "#E200BE";
+      ctx.beginPath();
+      ctx.arc(300, 120, 50, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx.fill();
+
+      // Vẽ tai mèo nhỏ hơn
+      ctx.fillStyle = "#E200BE";
+      ctx.save();
+      ctx.translate(260, 109);
+      ctx.rotate((-60 * Math.PI) / 180);
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(20, -30); // Giảm kích thước
+      ctx.lineTo(50, 0); // Giảm kích thước
+      ctx.fill();
+      ctx.restore();
+
+      // Vẽ tai mèo nhỏ hơn
+      ctx.save();
+      ctx.translate(320, 69);
+      ctx.rotate((60 * Math.PI) / 180);
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(20, -30); // Giảm kích thước
+      ctx.lineTo(50, 0); // Giảm kích thước
+      ctx.fill();
+      ctx.restore();
+
+      // Vẽ mắt mèo
+      ctx.fillStyle = "#AAA9DC";
+      ctx.beginPath();
+      ctx.arc(280, 110, 10, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#0420D6";
+      ctx.beginPath();
+      ctx.arc(283, 110, 6.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#AAA9DC";
+      ctx.beginPath();
+      ctx.arc(320, 110, 10, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#0420D6";
+      ctx.beginPath();
+      ctx.arc(317, 110, 6.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Vẽ mũi mèo hình tam giác
+      ctx.fillStyle = "blue";
+      ctx.beginPath();
+      ctx.moveTo(300, 120);
+      ctx.lineTo(290, 140);
+      ctx.lineTo(310, 140);
+      ctx.closePath();
+      ctx.fill();
+
+      // Vẽ chân mèo
+      ctx.fillStyle = "#E200BE";
+      ctx.fillRect(110, 250, 20, 50);
+      ctx.fillRect(170, 250, 20, 50);
+      ctx.fillRect(210, 250, 20, 50);
+      ctx.fillRect(270, 250, 20, 50);
+
+      // Vẽ đuôi mèo
+      ctx.fillStyle = "#E200BE";
+      ctx.save();
+      ctx.translate(50, 150);
+      ctx.rotate((-60 * Math.PI) / 180);
+      ctx.fillRect(0, 0, 20, 70);
+      ctx.restore();
+
+      // Chuột
+      const canvas1 = document.getElementById("canvas1");
+      const ctx1 = canvas1.getContext("2d");
+
+      // Vẽ đầu chuột
+      ctx1.fillStyle = "#0FD610";
+      ctx1.save();
+      ctx1.translate(200, 200); // Di chuyển điểm gốc đến vị trí trung tâm của tam giác
+      ctx1.beginPath();
+      const sideLength = 150; // Chiều dài cạnh của tam giác
+      const height = (Math.sqrt(3) / 2) * sideLength; // Chiều cao của tam giác đều
+      ctx1.moveTo(0, height / 2); // Đỉnh dưới của tam giác
+      ctx1.lineTo(-sideLength / 2, -height / 2); // Góc trên bên trái của tam giác
+      ctx1.lineTo(sideLength / 2, -height / 2); // Góc trên bên phải của tam giác
+      ctx1.closePath(); // Đóng đường vẽ để tạo thành tam giác
+      ctx1.fill();
+      ctx1.restore();
+
+      // Vẽ tai chuột
+      ctx1.fillStyle = "#0FD610";
+      ctx1.beginPath();
+      ctx1.arc(280, 130, 40, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx1.fill();
+
+      ctx1.fillStyle = "#0FD610";
+      ctx1.beginPath();
+      ctx1.arc(130, 130, 40, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx1.fill();
+
+      ctx1.fillStyle = "#DBAA83";
+      ctx1.beginPath();
+      ctx1.arc(280, 130, 20, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx1.fill();
+
+      ctx1.fillStyle = "#DBAA83";
+      ctx1.beginPath();
+      ctx1.arc(130, 130, 20, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx1.fill();
+
+      // Vẽ mũi chuột
+      ctx1.fillStyle = "#DBAA83";
+      ctx1.beginPath();
+      ctx1.arc(200, 245, 20, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx1.fill();
+
+      // Vẽ râu chuột
+      ctx1.fillStyle = "red"; // Màu đỏ cho râu
+      ctx1.fillRect(220, 245, 90, 5); // Râu ngang
+      ctx1.fillRect(90, 245, 90, 5); // Râu ngang
+
+      ctx1.fillStyle = "red";
+      ctx1.save();
+      ctx1.translate(220, 242);
+      ctx1.rotate((-20 * Math.PI) / 180);
+      ctx1.fillRect(0, 0, 90, 5);
+      ctx1.restore();
+
+      ctx1.fillStyle = "red";
+      ctx1.save();
+      ctx1.translate(220, 247);
+      ctx1.rotate((20 * Math.PI) / 180);
+      ctx1.fillRect(0, 0, 90, 5);
+      ctx1.restore();
+
+      ctx1.fillStyle = "red";
+      ctx1.save();
+      ctx1.translate(180, 245);
+      ctx1.rotate((-160 * Math.PI) / 180);
+      ctx1.fillRect(0, 0, 90, 5);
+      ctx1.restore();
+
+      ctx1.fillStyle = "red";
+      ctx1.save();
+      ctx1.translate(180, 254);
+      ctx1.rotate((160 * Math.PI) / 180);
+      ctx1.fillRect(0, 0, 90, 5);
+      ctx1.restore();
+
+      // Vẽ mắt chuột
+      ctx1.fillStyle = "#AAA9DC";
+      ctx1.beginPath();
+      ctx1.arc(180, 170, 10, 0, Math.PI * 2);
+      ctx1.fill();
+
+      ctx1.fillStyle = "black";
+      ctx1.beginPath();
+      ctx1.arc(183, 170, 6.5, 0, Math.PI * 2);
+      ctx1.fill();
+
+      ctx1.fillStyle = "#AAA9DC";
+      ctx1.beginPath();
+      ctx1.arc(220, 170, 10, 0, Math.PI * 2);
+      ctx1.fill();
+
+      ctx1.fillStyle = "black";
+      ctx1.beginPath();
+      ctx1.arc(217, 170, 6.5, 0, Math.PI * 2);
+      ctx1.fill();
+
+      //Vẽ chó
+      const canvas2 = document.getElementById("canvas2");
+      const ctx2 = canvas2.getContext("2d");
+      // Vẽ thân chó
+      ctx2.fillStyle = "#FD5800";
+      ctx2.fillRect(100, 150, 200, 100); // x, y, chiều rộng, chiều cao
+
+      // Vẽ đầu chó
+      ctx2.fillStyle = "#FD5800";
+      ctx2.beginPath();
+      ctx2.fillRect(220, 70, 80, 80); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx2.fill();
+
+      // Vẽ tai chó nhỏ hơn
+      ctx2.fillStyle = "#A66350";
+      ctx2.save();
+      ctx2.translate(230, 40);
+      ctx2.rotate((-200 * Math.PI) / 180);
+      ctx2.beginPath();
+      ctx2.moveTo(0, 0);
+      ctx2.lineTo(20, -30); // Giảm kích thước
+      ctx2.lineTo(50, 0); // Giảm kích thước
+      ctx2.fill();
+      ctx2.restore();
+
+      // Vẽ tai chó nhỏ hơn
+      ctx2.save();
+      ctx2.translate(330, 70);
+      ctx2.rotate((230 * Math.PI) / 180);
+      ctx2.beginPath();
+      ctx2.moveTo(0, 0);
+      ctx2.lineTo(20, -30); // Giảm kích thước
+      ctx2.lineTo(50, 0); // Giảm kích thước
+      ctx2.fill();
+      ctx2.restore();
+
+      // Vẽ mắt chó
+      ctx2.fillStyle = "#AAA9DC";
+      ctx2.beginPath();
+      ctx2.arc(240, 110, 10, 0, Math.PI * 2);
+      ctx2.fill();
+
+      ctx2.fillStyle = "black";
+      ctx2.beginPath();
+      ctx2.arc(243, 110, 6.5, 0, Math.PI * 2);
+      ctx2.fill();
+
+      ctx2.fillStyle = "#AAA9DC";
+      ctx2.beginPath();
+      ctx2.arc(280, 110, 10, 0, Math.PI * 2);
+      ctx2.fill();
+
+      ctx2.fillStyle = "black";
+      ctx2.beginPath();
+      ctx2.arc(278, 110, 6.5, 0, Math.PI * 2);
+      ctx2.fill();
+
+      // Vẽ mũi chó hình tam giác
+      ctx2.fillStyle = "#A66350";
+      ctx2.beginPath();
+      ctx2.moveTo(260, 120);
+      ctx2.lineTo(250, 140);
+      ctx2.lineTo(270, 140);
+      ctx2.closePath();
+      ctx2.fill();
+      // Vẽ cái miệng của chó
+      ctx2.fillStyle = "#F4CF06";
+      ctx2.beginPath();
+      ctx2.arc(260, 165, 15, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx2.fill();
+
+      // Vẽ đuôi chó
+      ctx2.fillStyle = "#A66350";
+      ctx2.save();
+      ctx2.translate(30, 170);
+      ctx2.rotate((-90 * Math.PI) / 180);
+      ctx2.fillRect(0, 0, 20, 70);
+      ctx2.restore();
+
+      // Vẽ chân mèo
+      ctx2.fillStyle = "#A66350";
+      ctx2.fillRect(110, 250, 20, 50);
+      ctx2.fillRect(170, 250, 20, 50);
+      ctx2.fillRect(210, 250, 20, 50);
+      ctx2.fillRect(270, 250, 20, 50);
+
+      //Vẽ ong
+      const canvas3 = document.getElementById("canvas3");
+      const ctx3 = canvas3.getContext("2d");
+      // Vẽ thân ong
+      ctx3.fillStyle = "#FFFF01";
+      ctx3.beginPath();
+      ctx3.arc(180, 125, 30, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx3.fill();
+
+      ctx3.fillStyle = "#FFFF01";
+      ctx3.beginPath();
+      ctx3.arc(180, 195, 40, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx3.fill();
+
+      ctx3.fillStyle = "#FFFF01";
+      ctx3.beginPath();
+      ctx3.arc(180, 283, 50, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx3.fill();
+
+      // Vẽ cánh ong
+      ctx3.fillStyle = "#FE4823";
+      ctx3.save();
+      ctx3.translate(160, 190);
+      ctx3.rotate((-200 * Math.PI) / 180);
+      ctx3.beginPath();
+      ctx3.moveTo(0, 0);
+      ctx3.lineTo(50, 50); // Giảm kích thước
+      ctx3.lineTo(150, 50); // Giảm kích thước
+      ctx3.fill();
+      ctx3.restore();
+
+      ctx3.fillStyle = "#70DDF0";
+      ctx3.save();
+      ctx3.translate(120, 185);
+      ctx3.rotate((-220 * Math.PI) / 180);
+      ctx3.beginPath();
+      ctx3.moveTo(0, 0);
+      ctx3.lineTo(10, 30); // Giảm kích thước
+      ctx3.lineTo(60, 50); // Giảm kích thước
+      ctx3.fill();
+      ctx3.restore();
+
+      ctx3.fillStyle = "#FE4823";
+      ctx3.save();
+      ctx3.translate(370, 200);
+      ctx3.rotate((-200 * Math.PI) / 180);
+      ctx3.beginPath();
+      ctx3.moveTo(0, 0);
+      ctx3.lineTo(70, 70); // Giảm kích thước
+      ctx3.lineTo(150, 70); // Giảm kích thước
+      ctx3.fill();
+      ctx3.restore();
+
+      ctx3.fillStyle = "#70DDF0";
+      ctx3.save();
+      ctx3.translate(310, 190);
+      ctx3.rotate((-215 * Math.PI) / 180);
+      ctx3.beginPath();
+      ctx3.moveTo(0, 0);
+      ctx3.lineTo(60, 50); // Giảm kích thước
+      ctx3.lineTo(10, 30); // Giảm kích thước
+      ctx3.fill();
+      ctx3.restore();
+
+      // Vẽ cánh ong
+      ctx3.fillStyle = "#FE4823";
+      ctx3.save();
+      ctx3.translate(1, 270);
+      ctx3.rotate((-20 * Math.PI) / 180);
+      ctx3.beginPath();
+      ctx3.moveTo(0, 0);
+      ctx3.lineTo(50, 50); // Giảm kích thước
+      ctx3.lineTo(150, 50); // Giảm kích thước
+      ctx3.fill();
+      ctx3.restore();
+
+      ctx3.fillStyle = "#70DDF0";
+      ctx3.save();
+      ctx3.translate(40, 275);
+      ctx3.rotate((-40 * Math.PI) / 180);
+      ctx3.beginPath();
+      ctx3.moveTo(0, 0);
+      ctx3.lineTo(10, 30); // Giảm kích thước
+      ctx3.lineTo(60, 50); // Giảm kích thước
+      ctx3.fill();
+      ctx3.restore();
+
+      ctx3.fillStyle = "#FE4823";
+      ctx3.save();
+      ctx3.translate(200, 265);
+      ctx3.rotate((-20 * Math.PI) / 180);
+      ctx3.beginPath();
+      ctx3.moveTo(0, 0);
+      ctx3.lineTo(70, 70); // Giảm kích thước
+      ctx3.lineTo(150, 70); // Giảm kích thước
+      ctx3.fill();
+      ctx3.restore();
+
+      ctx3.fillStyle = "#70DDF0";
+      ctx3.save();
+      ctx3.translate(260, 275);
+      ctx3.rotate((-35 * Math.PI) / 180);
+      ctx3.beginPath();
+      ctx3.moveTo(0, 0);
+      ctx3.lineTo(60, 50); // Giảm kích thước
+      ctx3.lineTo(10, 30); // Giảm kích thước
+      ctx3.fill();
+      ctx3.restore();
+
+      // Vẽ mắt ong
+      ctx3.fillStyle = "black";
+      ctx3.beginPath();
+      ctx3.arc(170, 120, 3, 0, Math.PI * 2);
+      ctx3.fill();
+
+      ctx3.fillStyle = "black";
+      ctx3.beginPath();
+      ctx3.arc(190, 120, 3, 0, Math.PI * 2);
+      ctx3.fill();
+
+      //Vẽ má của ong
+      ctx3.fillStyle = "black";
+      ctx3.beginPath();
+      ctx3.arc(160, 140, 3, 0, Math.PI * 2);
+      ctx3.fill();
+
+      ctx3.fillStyle = "black";
+      ctx3.beginPath();
+      ctx3.arc(200, 140, 3, 0, Math.PI * 2);
+      ctx3.fill();
+
+      // Thiết lập màu sắc cho khuôn miệng
+      ctx3.fillStyle = "black";
+
+      // Vẽ nửa hình tròn
+      ctx3.beginPath();
+      ctx3.arc(180, 140, 10, 0, Math.PI, false);
+      ctx3.closePath();
+      ctx3.fill();
+
+      // Vẽ tai ong
+      ctx3.fillStyle = "#FE8D01";
+      ctx3.save();
+      ctx3.translate(120, 45);
+      ctx3.rotate((-30 * Math.PI) / 180);
+      ctx3.fillRect(0, 0, 20, 70);
+      ctx3.restore();
+
+      ctx3.fillStyle = "#FE8D01";
+      ctx3.save();
+      ctx3.translate(225, 38);
+      ctx3.rotate((30 * Math.PI) / 180);
+      ctx3.fillRect(0, 0, 20, 70);
+      ctx3.restore();
+
+      ctx3.fillStyle = "#F9320E";
+      ctx3.beginPath();
+      ctx3.arc(125, 30, 15, 0, Math.PI * 2);
+      ctx3.fill();
+      ctx3.fillStyle = "#F9320E";
+      ctx3.beginPath();
+      ctx3.arc(240, 34, 15, 0, Math.PI * 2);
+      ctx3.fill();
+
+      ctx3.fillStyle = "#FE8D01";
+      ctx3.save();
+      ctx3.translate(140, 318);
+      ctx3.rotate((30 * Math.PI) / 180);
+      ctx3.fillRect(0, 0, 20, 70);
+      ctx3.restore();
+
+      ctx3.fillStyle = "#FE8D01";
+      ctx3.save();
+      ctx3.translate(202, 328);
+      ctx3.rotate((-30 * Math.PI) / 180);
+      ctx3.fillRect(0, 0, 20, 70);
+      ctx3.restore();
+
+      //Vẽ con đà điểu
+      const canvas4 = document.getElementById("canvas4");
+      const ctx4 = canvas4.getContext("2d");
+
+      // Vẽ thân con đà điểu
+      ctx4.fillStyle = "#0000AB";
+      ctx4.beginPath();
+      ctx4.arc(150, 200, 90, Math.PI, 2 * Math.PI, false); // Vẽ nửa hình tròn từ π đến 2π (180 đến 360 độ)
+      ctx4.closePath();
+      ctx4.fill();
+
+      //Vẽ gai con đà điểu
+      ctx4.fillStyle = "#0074F1";
+      // ctx4.save();
+      // ctx4.translate(230, 155);
+      // ctx4.rotate((75 * Math.PI) / 180);
+      // ctx4.beginPath();
+      // ctx4.moveTo(0, 0);
+      // ctx4.lineTo(20, -30); // Giảm kích thước
+      // ctx4.lineTo(50, 0); // Giảm kích thước
+      // ctx4.fill();
+      // ctx4.restore();
+
+      ctx4.save();
+      ctx4.translate(200, 125);
+      ctx4.rotate((55 * Math.PI) / 180);
+      ctx4.beginPath();
+      ctx4.moveTo(0, 0);
+      ctx4.lineTo(20, -30); // Giảm kích thước
+      ctx4.lineTo(50, 0); // Giảm kích thước
+      ctx4.fill();
+      ctx4.restore();
+
+      ctx4.save();
+      ctx4.translate(165, 107);
+      ctx4.rotate((30 * Math.PI) / 180);
+      ctx4.beginPath();
+      ctx4.moveTo(0, 0);
+      ctx4.lineTo(20, -30); // Giảm kích thước
+      ctx4.lineTo(50, 0); // Giảm kích thước
+      ctx4.fill();
+      ctx4.restore();
+
+      ctx4.save();
+      ctx4.translate(125, 110);
+      ctx4.rotate((5 * Math.PI) / 180);
+      ctx4.beginPath();
+      ctx4.moveTo(0, 0);
+      ctx4.lineTo(20, -30); // Giảm kích thước
+      ctx4.lineTo(50, 0); // Giảm kích thước
+      ctx4.fill();
+      ctx4.restore();
+
+      ctx4.save();
+      ctx4.translate(85, 130);
+      ctx4.rotate((-20 * Math.PI) / 180);
+      ctx4.beginPath();
+      ctx4.moveTo(0, 0);
+      ctx4.lineTo(20, -30); // Giảm kích thước
+      ctx4.lineTo(50, 0); // Giảm kích thước
+      ctx4.fill();
+      ctx4.restore();
+
+      ctx4.save();
+      ctx4.translate(68, 160);
+      ctx4.rotate((-50 * Math.PI) / 180);
+      ctx4.beginPath();
+      ctx4.moveTo(0, 0);
+      ctx4.lineTo(20, -30); // Giảm kích thước
+      ctx4.lineTo(50, 0); // Giảm kích thước
+      ctx4.fill();
+      ctx4.restore();
+
+      ctx4.save();
+      ctx4.translate(63, 200);
+      ctx4.rotate((-80 * Math.PI) / 180);
+      ctx4.beginPath();
+      ctx4.moveTo(0, 0);
+      ctx4.lineTo(20, -30); // Giảm kích thước
+      ctx4.lineTo(50, 0); // Giảm kích thước
+      ctx4.fill();
+      ctx4.restore();
+
+      // Cái đuôi của đà điểu
+      ctx4.save();
+      ctx4.translate(75, 200);
+      ctx4.rotate((5 * Math.PI) / 180); // Lộn ngược lại
+      ctx4.beginPath();
+      ctx4.moveTo(0, 0);
+      ctx4.lineTo(-15, 35); // Tăng kích thước
+      ctx4.lineTo(-75, 0); // Tăng kích thước
+      ctx4.fill();
+      ctx4.restore();
+
+      //Vẽ cổ đà điểu
+      ctx4.fillStyle = "#FEDA48";
+      ctx4.save();
+      ctx4.translate(310, 128);
+      ctx4.rotate((65 * Math.PI) / 180);
+      ctx4.fillRect(0, 0, 30, 90);
+      ctx4.restore();
+
+      //Vẽ đầu đà điểu
+      ctx4.fillStyle = "#C5023C";
+      ctx4.beginPath();
+      ctx4.arc(335, 125, 30, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx4.fill();
+
+      //vẽ mắt đà điểu
+      ctx4.fillStyle = "#AAA9DC";
+      ctx4.beginPath();
+      ctx4.arc(340, 120, 10, 0, Math.PI * 2);
+      ctx4.fill();
+      ctx4.fillStyle = "black";
+      ctx4.beginPath();
+      ctx4.arc(344, 120, 5, 0, Math.PI * 2);
+      ctx4.fill();
+
+      //vẽ mỏ đà điểu
+      ctx4.fillStyle = "#FEDA48";
+      ctx4.beginPath();
+      ctx4.arc(375, 130, 15, 0, Math.PI, false);
+      ctx4.closePath();
+      ctx4.fill();
+
+      ctx4.save();
+      ctx4.translate(378, 127); // Di chuyển hệ tọa độ đến tâm của nửa hình tròn
+      ctx4.rotate((-20 * Math.PI) / 180); // Xoay 5 độ
+      ctx4.fillStyle = "#FEDA48";
+      ctx4.beginPath();
+      ctx4.arc(0, 0, 18, Math.PI, 2 * Math.PI, false); // Vẽ nửa hình tròn từ π đến 2π (180 đến 360 độ)
+      ctx4.closePath();
+      ctx4.fill();
+      ctx4.restore();
+
+      //Chân đà điểu
+      ctx4.fillStyle = "#E10948";
+      ctx4.fillRect(90, 200, 20, 30);
+      ctx4.fillRect(170, 200, 20, 30);
+      ctx4.fillStyle = "#E10948";
+      ctx4.save();
+      ctx4.translate(170, 250);
+      ctx4.rotate((-90 * Math.PI) / 180);
+      ctx4.fillRect(0, 0, 20, 50);
+      ctx4.restore();
+      ctx4.fillStyle = "#E10948";
+      ctx4.save();
+      ctx4.translate(90, 250);
+      ctx4.rotate((-90 * Math.PI) / 180);
+      ctx4.fillRect(0, 0, 20, 50);
+      ctx4.restore();
+
+      //Vẽ con bọ
+      const canvas5 = document.getElementById("canvas5");
+      const ctx5 = canvas5.getContext("2d");
+
+      //Vẽ thân con bọ
+      ctx5.fillStyle = "#017BA8";
+      ctx5.beginPath();
+      ctx5.arc(180, 95, 40, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx5.fill();
+
+      ctx5.fillStyle = "#017BA8";
+      ctx5.beginPath();
+      ctx5.arc(180, 183, 50, 0, Math.PI * 2); // x, y, bán kính, góc bắt đầu, góc kết thúc
+      ctx5.fill();
+      // Vẽ cánh con bọ (tam giác đều nhỏ hơn)
+      ctx5.fillStyle = "#00BB2F";
+      ctx5.save();
+      ctx5.translate(135, 170);
+      ctx5.rotate((5 * Math.PI) / 180); // Lộn ngược lại
+      ctx5.beginPath();
+      ctx5.moveTo(0, 0);
+      ctx5.lineTo(-40, 69.3); // Đỉnh thứ hai của tam giác đều (tăng kích thước)
+      ctx5.lineTo(-80, 0); // Đỉnh thứ ba của tam giác đều (tăng kích thước)
+      ctx5.closePath();
+      ctx5.fill();
+      ctx5.restore();
+
+      ctx5.save();
+      ctx5.translate(305, 170);
+      ctx5.rotate((5 * Math.PI) / 180); // Lộn ngược lại
+      ctx5.beginPath();
+      ctx5.moveTo(0, 0);
+      ctx5.lineTo(-40, 69.3); // Đỉnh thứ hai của tam giác đều (tăng kích thước)
+      ctx5.lineTo(-80, 0); // Đỉnh thứ ba của tam giác đều (tăng kích thước)
+      ctx5.closePath();
+      ctx5.fill();
+      ctx5.restore();
+
+      //Vẽ chân con bọ
+      ctx5.fillStyle = "#E6E245";
+      ctx5.save();
+      ctx5.translate(150, 218);
+      ctx5.rotate((30 * Math.PI) / 180);
+      ctx5.fillRect(0, 0, 20, 70);
+      ctx5.restore();
+
+      ctx5.fillStyle = "#E6E245";
+      ctx5.save();
+      ctx5.translate(182, 228);
+      ctx5.rotate((-15 * Math.PI) / 180);
+      ctx5.fillRect(0, 0, 20, 70);
+      ctx5.restore();
+
+      ctx5.fillStyle = "#00BB2F";
+      ctx5.beginPath();
+      ctx5.moveTo(210, 270);
+      ctx5.lineTo(200, 290);
+      ctx5.lineTo(220, 290);
+      ctx5.closePath();
+      ctx5.fill();
+
+      ctx5.fillStyle = "#00BB2F";
+      ctx5.beginPath();
+      ctx5.moveTo(120, 270);
+      ctx5.lineTo(110, 290);
+      ctx5.lineTo(130, 290);
+      ctx5.closePath();
+      ctx5.fill();
+
+      //Mắt con bọ
+      ctx5.fillStyle = "#AAA9DC";
+      ctx5.beginPath();
+      ctx5.arc(170, 90, 10, 0, Math.PI * 2);
+      ctx5.fill();
+
+      ctx5.fillStyle = "#E6E245";
+      ctx5.beginPath();
+      ctx5.arc(170, 93, 6.5, 0, Math.PI * 2);
+      ctx5.fill();
+
+      ctx5.fillStyle = "#AAA9DC";
+      ctx5.beginPath();
+      ctx5.arc(200, 93, 10, 0, Math.PI * 2);
+      ctx5.fill();
+
+      ctx5.fillStyle = "#E6E245";
+      ctx5.beginPath();
+      ctx5.arc(197, 93, 6.5, 0, Math.PI * 2);
+      ctx5.fill();
+    </script>
+  </body>
+</html>
